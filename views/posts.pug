@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  div.header
+    span.username 欢迎您 #{session.user}
+    - var str = '/images/'+session.avator+'.png';
+    img(src=str style="width:40px;")
+
+  div
+    a(href="/addPosts") 添加
+    table
+      thead
+          th 文章标题
+          th 文章内容
+          th 浏览量
+          th 作者
+          th 头像
+          th 发表时间
+          th 操作
+      tbody
+        - for(var i=0;i<list.length;i++)
+          tr
+            td #{list[i].title}
+            td #{list[i].content}
+            td #{list[i].pv}
+            td #{list[i].name}
+            td
+              img(src="")
+            td 2017-12-12 22:33:33
+            td
+              a(href="/detail/2") 详情
+              ||
+              a(href="javascript:;") 删除

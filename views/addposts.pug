@@ -1,0 +1,14 @@
+extends layout
+block content
+  div
+    ul
+      li
+        div
+          label 文章标题
+          input.js-title(placeholder="文章标题")
+          li
+            div
+              label 文章内容
+              textarea.js-content
+    button.js-add-btn 保存
+  script(src="/javascripts/posts/addposts.js")

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div
+    label 用户名
+    input.js-user(type="text" placeholder="请输入用户名")
+  div
+    label 密码
+    input.js-pwd(type="password" placeholder="请输入密码")
+  button.js-btn 登录
+  script(src="/javascripts/users/signin.js")

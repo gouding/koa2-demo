@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.wrap
+    h3 注册新用户
+    div.item
+      label 用户名
+      input.user(type="text" placeholder="请输入用户名")
+    div.item
+      label 密码
+      input.pwd(type="password" placeholder="请输入密码")
+    div.item
+      label 确认密码
+      input.pwdagain(type="password" placeholder="请确认密码")
+    div.item
+      label 请上传头像
+      input.avator(type="file")
+      input#avatorVal(type="hidden")
+      img.preview(alt="预览头像")
+    div.item-btn
+      button.btn.js-btn 注册
+  script(src='/javascripts/users/index.js')
